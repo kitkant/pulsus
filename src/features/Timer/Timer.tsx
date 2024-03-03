@@ -26,6 +26,7 @@ const Clock = styled.time`
 	cursor: default;
 	font-size: 1000%;
 	letter-spacing: -5px;
+	line-height: normal;
 `
 
 export default Timer
