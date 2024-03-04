@@ -1,5 +1,6 @@
 import ButtonSound from '@/features/ButtonSound/ButtonSound'
 import DateNow from '@/features/DateNow/DateNow'
+import Quotes from '@/features/Quotes/Quotes'
 import Timer from '@/features/Timer/Timer'
 import Weather from '@/features/Weather/Weather'
 import Welcome from '@/features/Welcome/Welcome'
@@ -17,7 +18,8 @@ const Layout = () => {
 				<DateNow />
 				<Welcome />
 			</FlexMiddle>
-			<FlexBottom className='w-full flex'>
+			<FlexBottom className='w-full flex justify-center'>
+				<Quotes />
 				<ButtonSound />
 			</FlexBottom>
 		</Wrapper>
@@ -34,6 +36,7 @@ const FlexMiddle = styled.div`
 	align-items: center;
 `
 const FlexBottom = styled.div`
-	justify-content: end;
+	height: 150px;
+	align-items: end;
 `
 export default Layout
