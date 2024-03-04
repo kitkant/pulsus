@@ -12,7 +12,6 @@ const Welcome = () => {
 	const [statusEdit, setStatusEdit] = useState(
 		cookies.get('name') ? false : true
 	)
-	console.log(dataInput, 'dataInput')
 
 	const timeOfDays = [
 		'Good morning',
