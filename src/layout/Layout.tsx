@@ -2,6 +2,7 @@ import ButtonSound from '@/features/ButtonSound/ButtonSound'
 import DateNow from '@/features/DateNow/DateNow'
 import Timer from '@/features/Timer/Timer'
 import Weather from '@/features/Weather/Weather'
+import Welcome from '@/features/Welcome/Welcome'
 import styled from '@emotion/styled'
 
 const Layout = () => {
@@ -14,6 +15,7 @@ const Layout = () => {
 			<FlexMiddle className='flex flex-col'>
 				<Timer />
 				<DateNow />
+				<Welcome />
 			</FlexMiddle>
 			<FlexBottom className='w-full flex'>
 				<ButtonSound />

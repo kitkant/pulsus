@@ -1,23 +1,35 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 
 const Timer = () => {
-	const [formatted, setFormatted] = useState('')
+	const now = new Date()
+	const hours = now.getHours()
+	const minutes = now.getMinutes()
+	const seconds = now.getSeconds()
 
-	setInterval(() => {
-		const now = new Date()
-		const hours = now.getHours()
-		const minutes = now.getMinutes()
-		const seconds = now.getSeconds()
+	const res = [
+		hours.toString().padStart(2, '0'),
+		minutes.toString().padStart(2, '0'),
+		seconds.toString().padStart(2, '0'),
+	].join(':')
 
-		setFormatted(
-			[
-				hours.toString().padStart(2, '0'),
-				minutes.toString().padStart(2, '0'),
-				seconds.toString().padStart(2, '0'),
-			].join(':')
-		)
-	}, 1000)
+	const [formatted, setFormatted] = useState(res)
+	useEffect(() => {
+		setInterval(() => {
+			const now = new Date()
+			const hours = now.getHours()
+			const minutes = now.getMinutes()
+			const seconds = now.getSeconds()
+
+			setFormatted(
+				[
+					hours.toString().padStart(2, '0'),
+					minutes.toString().padStart(2, '0'),
+					seconds.toString().padStart(2, '0'),
+				].join(':')
+			)
+		}, 1000)
+	}, [])
 
 	return <Clock>{formatted}</Clock>
 }
