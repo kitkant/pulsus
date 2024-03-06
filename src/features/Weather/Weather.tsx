@@ -30,6 +30,7 @@ const Weather = () => {
 			.catch((error): any => {
 				// console.log(error)
 			})
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	const changeCity = (event: any) => {

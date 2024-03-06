@@ -1,13 +1,3 @@
-// import '@/styles/globals.css'
-// import type { AppProps } from 'next/app'
-// import React, { useState, useEffect } from 'react'
-
-// export default function App({ Component, pageProps }: AppProps) {
-// 	const [isLoading, setIsLoading] = useState(true)
-
-// 	return <Component {...pageProps} />
-// }
-
 import Loader from '@/features/Loader/Loader'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
@@ -18,10 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	const [isLoading, setIsLoading] = useState(true)
 	const timerId = setTimeout(() => {
 		setIsLoading(false)
-	}, 2500)
-	useEffect(() => {
-		clearTimeout(timerId)
-	}, [isLoading])
+	}, 5500)
 
 	// useEffect(() => {
 	// 	console.log(isLoading)

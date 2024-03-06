@@ -58,7 +58,6 @@ const Carousel = () => {
 				<Layout />
 				{finallyList(bgNum).map((img: any) => {
 					return (
-						<>
 							<SwiperSlide key={img}>
 								<Image
 									alt='slide'
@@ -70,7 +69,6 @@ const Carousel = () => {
 									style={{ objectFit: 'cover' }}
 								/>
 							</SwiperSlide>
-						</>
 					)
 				})}
 			</Swiper>
