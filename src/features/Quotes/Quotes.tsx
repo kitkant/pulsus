@@ -15,7 +15,7 @@ const Quotes = () => {
 			})
 	}, [])
 	return (
-		<div className='flex flex-col max-w-[70%] gap-[10px] items-center'>
+		<div className='flex flex-col max-w-[70%] gap-[10px] items-center text-center'>
 			<span className='text-2xl'>{quotes.quote}</span>
 			<span className='text-[#ffffffcc] text-xl'>{quotes.author}</span>
 		</div>
