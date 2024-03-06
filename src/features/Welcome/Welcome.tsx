@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Cookies from 'universal-cookie'
 
+
 const Welcome = () => {
 	const cookies = new Cookies(null, { path: '/' })
 	const [timeOfDay, setTimeOfDay] = useState('')

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
+import localFont from 'next/font/local'
+ 
+const arial = localFont({ src: '../../pages/fonts/Arial-MT.woff' })
 
 const Timer = () => {
 	const now = new Date()
@@ -31,13 +34,13 @@ const Timer = () => {
 		}, 1000)
 	}, [])
 
-	return <Clock>{formatted}</Clock>
+	return <Clock className={arial.className}>{formatted}</Clock>
 }
 
 const Clock = styled.time`
 	cursor: default;
 	font-size: 1000%;
-	letter-spacing: -5px;
+	letter-spacing: -9px;
 	line-height: normal;
 `
 
