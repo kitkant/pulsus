@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import localFont from 'next/font/local'
- 
+
 const arial = localFont({ src: '../../pages/fonts/Arial-MT.woff' })
 
 const Timer = () => {

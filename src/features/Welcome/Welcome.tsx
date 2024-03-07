@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Cookies from 'universal-cookie'
 
-
 const Welcome = () => {
 	const cookies = new Cookies(null, { path: '/' })
 	const [timeOfDay, setTimeOfDay] = useState('')
@@ -65,7 +64,7 @@ const Welcome = () => {
 	}
 
 	return (
-		<Wrapper className='text-3xl flex gap-[10px] items-center'>
+		<Wrapper className='text-3xl flex gap-[10px] items-center mt-[10px]'>
 			<span className='text-5xl'>{timeOfDay},</span>
 			<span className='text-5xl'>
 				{statusEdit ? (
