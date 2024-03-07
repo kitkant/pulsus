@@ -94,7 +94,7 @@ const Weather = () => {
 							height={64}
 							alt='temperature status'
 						/>
-						<Temperature className=''>{data.current.temp_c}&#8451;</Temperature>
+						<Temperature className=''>{Math.round(data.current.temp_c)}&#8451;</Temperature>
 					</div>
 					<div className='max-w-[220px] leading-none'>
 						{data.current.condition.text}
