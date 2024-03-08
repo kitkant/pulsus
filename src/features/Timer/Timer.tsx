@@ -42,6 +42,9 @@ const Clock = styled.time`
 	font-size: 1000%;
 	letter-spacing: -9px;
 	line-height: normal;
+	@media (max-width: 1440px) {
+		font-size: 152px;
+	}
 `
 
 export default Timer

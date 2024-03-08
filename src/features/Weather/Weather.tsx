@@ -85,19 +85,21 @@ const Weather = () => {
 					/>
 				</button>
 				<div className='flex items-center flex-col pt-[7px] select-none'>
-					<h5>{data.location.name}</h5>
+					<Span>{data.location.name}</Span>
 					<div className='flex '>
 						<Image
 							src={`https:${data.current.condition.icon}`}
-							width={64}
-							height={64}
+							width={48}
+							height={48}
 							alt='temperature status'
 						/>
-						<Temperature className=''>{Math.round(data.current.temp_c)}&#8451;</Temperature>
+						<Temperature className=''>
+							{Math.round(data.current.temp_c)}&#8451;
+						</Temperature>
 					</div>
-					<div className='max-w-[220px] leading-none'>
+					<Span className='max-w-[220px] leading-none'>
 						{data.current.condition.text}
-					</div>
+					</Span>
 				</div>
 			</WeatherWrapper>
 			<Modal
@@ -145,6 +147,14 @@ const Temperature = styled.div`
 	align-items: center;
 	font-weight: 400;
 	letter-spacing: 0px;
+	@media (max-width: 1440px) {
+		font-size: 24px;
+	}
+`
+const Span = styled.span`
+	@media (max-width: 1440px) {
+		font-size: 14px;
+	}
 `
 const WeatherInput = styled.input`
 	width: 100%;

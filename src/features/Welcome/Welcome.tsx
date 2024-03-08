@@ -65,7 +65,7 @@ const Welcome = () => {
 
 	return (
 		<Wrapper className='text-3xl flex gap-[10px] items-center mt-[10px]'>
-			<span className='text-5xl'>{timeOfDay},</span>
+			<TimeOfDay className='text-5xl'>{timeOfDay},</TimeOfDay>
 			<span className='text-5xl'>
 				{statusEdit ? (
 					<Input
@@ -119,6 +119,21 @@ const Input = styled.input`
 	text-align: center;
 	transition: border-color 0.2s ease;
 	line-height: 1;
+	&::placeholder {
+		font-size: 34px;
+	}
+	@media (max-width: 1440px) {
+		min-width: 1em;
+		max-width: 5em;
+		&::placeholder {
+			font-size: 28px;
+		}
+	}
+`
+const TimeOfDay = styled.span`
+	@media (max-width: 1440px) {
+		font-size: 42px;
+	}
 `
 const Wrapper = styled.div`
 	transition: all 0.2s ease;
