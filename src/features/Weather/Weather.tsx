@@ -84,7 +84,6 @@ const Weather = () => {
 						alt='temperature status'
 					/>
 				</button>
-
 				<div className='flex items-center flex-col pt-[7px] select-none'>
 					<h5>{data.location.name}</h5>
 					<div className='flex '>
