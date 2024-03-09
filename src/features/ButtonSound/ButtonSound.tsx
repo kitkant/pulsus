@@ -18,7 +18,7 @@ const ButtonSound = () => {
 			setTimeout(() => {
 				stop()
 				setPlayToggle(false)
-			}, 155000)
+			}, 136000)
 		}
 		setPlayToggle(!playToggle)
 	}
