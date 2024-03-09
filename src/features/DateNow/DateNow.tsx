@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const DateNow = () => {
 	const now = new Date()
@@ -31,10 +33,15 @@ const DateNow = () => {
 			)
 	}, 1000)
 
-	return <Span className='text-4xl'>{date}</Span>
+	useGSAP(() => {
+		gsap.to('.box', { opacity: '1', duration: 2, delay: 2 })
+	})
+
+	return <Span className='text-4xl box'>{date}</Span>
 }
 
 const Span = styled.span`
+	opacity: 0;
 	@media (max-width: 1440px) {
 		font-size: 32px;
 	}

@@ -12,6 +12,7 @@ import {
 	useDisclosure,
 } from '@nextui-org/react'
 import Cookies from 'universal-cookie'
+import gsap from 'gsap'
 
 const Weather = () => {
 	const [data, setData]: any = useState(null)
@@ -32,6 +33,14 @@ const Weather = () => {
 			})
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
+
+	useEffect(() => {
+		gsap.to('.weather', { opacity: '1', duration: 3, delay: 3 })
+	}, [data])
+
+	// useGSAP(() => {
+	// 	gsap.to('.weather', { opacity: '1', duration: 3 })
+	// })
 
 	const changeCity = (event: any) => {
 		setDataInput(event.target.value)
@@ -69,11 +78,11 @@ const Weather = () => {
 	}
 
 	if (isLoading) return <p>Loading...</p>
-	if (!data) return <p>No profile data</p>
+	if (!data) return <p>No location</p>
 
 	return (
 		<>
-			<WeatherWrapper>
+			<WeatherWrapper className='weather'>
 				<button className='cursor-pointer changeCity' onClick={onOpen}>
 					<Image
 						src={
@@ -169,6 +178,7 @@ const WeatherInput = styled.input`
 	transition: border-color 0.2s ease;
 `
 const WeatherWrapper = styled.div`
+	opacity: 0;
 	display: flex;
 	align-items: start;
 	flex-wrap: 10px;
