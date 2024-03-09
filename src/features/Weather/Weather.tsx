@@ -13,6 +13,9 @@ import {
 } from '@nextui-org/react'
 import Cookies from 'universal-cookie'
 import gsap from 'gsap'
+import localFont from 'next/font/local'
+
+const myFont = localFont({ src: '../../pages/fonts/gilroy-regular.ttf' })
 
 const Weather = () => {
 	const [data, setData]: any = useState(null)
@@ -114,9 +117,9 @@ const Weather = () => {
 			<Modal
 				size={'xl'}
 				isOpen={isOpen}
-				className='bg-[#18181b]'
 				onClose={closeModal}
 				onKeyDown={closeModalKey}
+				className={myFont.className + ' ' + 'bg-[#18181b]'}
 			>
 				<ModalContent>
 					{(onClose: any) => (
